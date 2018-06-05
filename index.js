@@ -40,20 +40,20 @@ b2.addEventListener('click', function(){
 });
 
 // update heading with the input
-function setHeading(e){
+function setHeading(){
     h1.textContent = document.querySelector('form')[0].value;
     h1text = h1.textContent;
 }
 
 // when the form is submitted
-document.querySelector('form').addEventListener('submit', function(e){
+document.querySelector('form').addEventListener('submit', function(){
     event.preventDefault();
     
-    setHeading(e);
+    setHeading();
 });
 
 // "submit" button works when enter is pressed instead of pressing the button
 window.addEventListener('keydown', function(e){
     if(e.keyCode === 13)
-        setHeading(e);
+        setHeading();
 });
