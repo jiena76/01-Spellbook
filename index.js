@@ -3,12 +3,13 @@ const b2 = document.querySelector('.b2');
 const h1 = document.querySelector('h1');
 const h2 = document.querySelector('h2');
 
-const h1text = h1.textContent
+let h1text = h1.textContent
 const h2text = h2.textContent
 
 b1.style.color = "blue";
 b2.style.color = "blue";
 
+// change heading1 content & color
 b1.addEventListener('click', function(){
     if(h1.textContent === h1text){
         h1.textContent = "HEY!";
@@ -23,6 +24,7 @@ b1.addEventListener('click', function(){
     b1.style.color="purple";
 });
 
+// change heading2 & color
 b2.addEventListener('click', function(){
     if(h2.textContent === h2text){
         h2.textContent = "MAGIC";
@@ -40,6 +42,7 @@ b2.addEventListener('click', function(){
 // update heading with the input
 function setHeading(e){
     h1.textContent = document.querySelector('form')[0].value;
+    h1text = h1.textContent;
 }
 
 // when the form is submitted
