@@ -37,9 +37,19 @@ b2.addEventListener('click', function(){
     b2.style.color = 'purple';
 });
 
+function setHeading(e){
+    const form = document.querySelector('form');
+    h1.innerHTML = form.elements['newHeading'].value;
+}
+
 document.querySelector('form').addEventListener('submit', function(e){
     event.preventDefault();
     
-    const form = document.querySelector('form');
-    h1.innerHTML = form.elements['newHeading'].value;
+    setHeading(e);
+});
+
+// "submit" button works when enter is pressed instead of pressing the button
+window.addEventListener('keydown', function(e){
+    if(e.keyCode === 13)
+        setHeading(e);
 });
