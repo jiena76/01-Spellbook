@@ -42,6 +42,8 @@ b2.addEventListener('click', function(){
 // update heading with the input
 function setHeading(){
     h1.textContent = document.querySelector('form')[0].value;
+    // this also works:
+    //h1.textContent = document.querySelector('input').value;
     h1text = h1.textContent;
 }
 
