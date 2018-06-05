@@ -6,9 +6,9 @@ const h2 = document.querySelector('h2');
 let h1text = h1.textContent
 const h2text = h2.textContent
 
-document.querySelector("button").style.color = 'yellow';
-//b1.style.color = "blue";
-//b2.style.color = "blue";
+//document.querySelectorAll("button").style.color = 'yellow';
+b1.style.color = "blue";
+b2.style.color = "blue";
 
 // change heading1 content & color
 b1.addEventListener('click', function(){
