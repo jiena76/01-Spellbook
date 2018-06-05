@@ -40,23 +40,31 @@ b2.addEventListener('click', function(){
     b2.style.color = 'purple';
 });
 
+/*
+    REAL HOMEWORK BEGINS HERE
+*/ 
+
 // update heading with the input
-function setHeading(){
+/*function setHeading(){
     h1.textContent = document.querySelector('form')[0].value;
     // this also works:
     //h1.textContent = document.querySelector('input').value;
     h1text = h1.textContent;
+}*/
+
+function addSpells(e){
+    document.querySelector('.spells').innerHTML += e.target.newHeading.value + '<br>';
 }
 
 // when the form is submitted
-document.querySelector('form').addEventListener('submit', function(){
+document.querySelector('form').addEventListener('submit', function(e){
     event.preventDefault();
 
-    setHeading();
+    addSpells(e);
 });
 
 // "submit" button works when enter is pressed instead of pressing the button
 window.addEventListener('keydown', function(e){
     if(e.keyCode === 13)
-        setHeading();
+        addSpells(e);
 });
