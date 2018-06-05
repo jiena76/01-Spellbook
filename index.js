@@ -1,4 +1,4 @@
-const b1 = document.querySelector('.b1');
+/*const b1 = document.querySelector('.b1');
 const b2 = document.querySelector('.b2');
 const h1 = document.querySelector('h1');
 const h2 = document.querySelector('h2');
@@ -39,6 +39,7 @@ b2.addEventListener('click', function(){
     }
     b2.style.color = 'purple';
 });
+*/
 
 /*
     REAL HOMEWORK BEGINS HERE
