@@ -54,6 +54,7 @@ b2.addEventListener('click', function(){
 
 function addSpells(e){
     document.querySelector('.spells').innerHTML += `<li>${e.target.newHeading.value}</li>`;
+    document.querySelector('form').reset();
 }
 
 // when the form is submitted
