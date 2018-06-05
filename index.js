@@ -37,6 +37,9 @@ b2.addEventListener('click', function(){
     b2.style.color = 'purple';
 });
 
-document.querySelector('fb').addEventListener('click', function(){
-    h1.textContent = document.querySelector('nh').textContent;
-})
+document.querySelector('form').addEventListener('submit', function(e){
+    event.preventDefault();
+    
+    const form = document.querySelector('form');
+    h1.innerHTML = form.elements['newHeading'].value;
+});
