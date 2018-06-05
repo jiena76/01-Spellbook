@@ -37,11 +37,12 @@ b2.addEventListener('click', function(){
     b2.style.color = 'purple';
 });
 
+// update heading with the input
 function setHeading(e){
-    const form = document.querySelector('form');
-    h1.innerHTML = form.elements['newHeading'].value;
+    h1.textContent = document.querySelector('form')[0].value;
 }
 
+// when the form is submitted
 document.querySelector('form').addEventListener('submit', function(e){
     event.preventDefault();
     
