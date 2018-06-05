@@ -48,7 +48,7 @@ function setHeading(){
 // when the form is submitted
 document.querySelector('form').addEventListener('submit', function(){
     event.preventDefault();
-    
+
     setHeading();
 });
 
