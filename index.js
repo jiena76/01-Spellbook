@@ -53,7 +53,7 @@ b2.addEventListener('click', function(){
 }*/
 
 function addSpells(e){
-    document.querySelector('.spells').innerHTML += `${e.target.newHeading.value}<br>`;
+    document.querySelector('.spells').innerHTML += `<li>${e.target.newHeading.value}</li>`;
 }
 
 // when the form is submitted
