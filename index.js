@@ -100,8 +100,8 @@ document.querySelector('form').addEventListener('submit', function(e){
         addSpells(e);
 });*/
 
-// alphabetically sort the unordered list
-function alphabeticalSort(){
+// by the level, sort the unordered list
+function levelSort(){
     const lis = document.querySelectorAll('li');
     let items = [];
 
