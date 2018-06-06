@@ -24,7 +24,6 @@ h1 {
   width: 50vw;
   height: 40vw;;
   overflow-y: scroll;
-  font-size: 3vw;
   color: rgba(100, 50, 0, 0.8);
   padding: 1.5rem 4rem;
   box-shadow: 1px 1px 15px  rgba(0,0,0,0.4);
@@ -111,7 +110,7 @@ button[type="submit"]:hover {
 .b{
   background-color: transparent;
   color: #6b3102;
-  font-size: 1rem;
+  font-size: 2vw;
   white-space: nowrap;
   display: inline-block;
   font-family: inherit;
