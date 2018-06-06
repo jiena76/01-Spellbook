@@ -69,10 +69,9 @@ function addSpells(e){
 
     const level = document.querySelector('.range-bar').value;
 
-    document.querySelector('.spells').innerHTML += 
-        `<li>lvl.<span style="color:${colors[level]};background-color:white">
-    ${level}</span> ${e.target.spell.value}</li>`;
+    //document.querySelector('.spells').innerHTML += `<li>lvl.<span style="color:${colors[level]};background-color:white">${level}</span> ${e.target.spell.value}</li>`;
     //createNode(e);
+    document.querySelector('.spells').innerHTML += `<li>lvl.${level} ${e.target.spell.value}</li>`;
     document.querySelector('form').reset();
 }
 
