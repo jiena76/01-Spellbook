@@ -74,7 +74,7 @@ function addSpells(e){
     //document.querySelector('.spells').innerHTML += `<li>lvl.<span style="color:${colors[level]};background-color:white">${level}</span> ${e.target.spell.value}</li>`;
     //createNode(e);
     document.querySelector('.spells').innerHTML +=
-        `<li id="${num}"><button class=b onclick="buttonPressed(event);" value=${num}>lvl.${level} 
+        `<li id="${num}"><button class='b' onclick="buttonPressed(event);" value=${num}>lvl.${level} 
         ${e.target.spell.value}</button></li>`;
     
     // push the data into an array
@@ -113,7 +113,7 @@ function buttonPressed(e){
     // remove the data from the array by setting it to null
     data[e.target.value] = null;
 
-    console.log(data);
+    console.log(element.textContent);
 }
 
 // "submit" button works when enter is pressed instead of pressing the button
@@ -122,6 +122,7 @@ function buttonPressed(e){
         addSpells(e);
 });*/
 
+/*  Doesn't work anymore after changing elements of the list into buttons
 // by the level, sort the unordered list
 function levelSort(){
     const lis = document.querySelectorAll('li');
@@ -139,6 +140,7 @@ function levelSort(){
         lis[i].innerHTML = items[i];
     }
 };
+*/
 
 document.querySelector('.range-bar').addEventListener("mousemove", function(e){
     console.log(e.target.value);
