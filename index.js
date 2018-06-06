@@ -58,10 +58,14 @@ function addSpells(e){
     if(!e.target.spell.value)
         return;
     //document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
-    let li = document.createElement("li")
-    li.appendChild(document.createTextNode(e.target.spell.value));
-    document.querySelector('ul').appendChild(li);
+    createNode(e);
     document.querySelector('form').reset();
+}
+
+function createNode(e){
+    let li = document.createElement("li")
+    li.appendChild(document.createTextNode("lvl." + e.target.level.value + " " + e.target.spell.value));
+    document.querySelector('ul').appendChild(li);
 }
 
 // when the form is submitted
@@ -95,3 +99,8 @@ function alphabeticalSort(){
         lis[i].innerHTML = items[i];
     }
 };
+
+document.querySelector('.range-bar').addEventListener("mousemove", function(e){
+    console.log(e.target.value);
+    document.querySelector('.value').innerHTML = `Value = ${e.target.value}`;
+});
