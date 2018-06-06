@@ -75,16 +75,19 @@ document.querySelector('form').addEventListener('submit', function(e){
         addSpells(e);
 });*/
 
+// alphabetically sort the unordered list
 function alphabeticalSort(){
     const lis = document.querySelectorAll('li');
     let items = [];
 
+    // push all items to an array
     for(let i = 0; i < lis.length; i++){
         items.push(lis[i].innerHTML);
     }
 
     items.sort();
 
+    // edit existing list items with ordered items
     for(let i = 0; i < lis.length; i++){
         lis[i].innerHTML = items[i];
     }
