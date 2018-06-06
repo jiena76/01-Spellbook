@@ -75,8 +75,17 @@ document.querySelector('form').addEventListener('submit', function(e){
         addSpells(e);
 });*/
 
-document.querySelector('form').addEventListener('button', function(e){
+function alphabeticalSort(){
     const lis = document.querySelectorAll('li');
+    let items = [];
 
-    console.log(lis);
-});
+    for(let i = 0; i < lis.length; i++){
+        items.push(lis[i].innerHTML);
+    }
+
+    items.sort();
+
+    for(let i = 0; i < lis.length; i++){
+        lis[i].innerHTML = items[i];
+    }
+};
