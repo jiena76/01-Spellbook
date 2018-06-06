@@ -55,7 +55,7 @@ b2.addEventListener('click', function(){
 
 function addSpells(e){
     // when nothing entered but submit pressed, do nothing
-    if(e.target.spell.value === "")
+    if(!e.target.spell.value)
         return;
     document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
     document.querySelector('form').reset();
@@ -63,13 +63,20 @@ function addSpells(e){
 
 // when the form is submitted
 document.querySelector('form').addEventListener('submit', function(e){
-    event.preventDefault();
+    // forbids refreshing
+    e.preventDefault();
 
     addSpells(e);
 });
 
 // "submit" button works when enter is pressed instead of pressing the button
-window.addEventListener('keydown', function(e){
+/*window.addEventListener('keydown', function(e){
     if(e.keyCode === 13)
         addSpells(e);
+});*/
+
+document.querySelector('form').addEventListener('button', function(e){
+    const lis = document.querySelectorAll('li');
+
+    console.log(lis);
 });
