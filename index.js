@@ -54,7 +54,10 @@ b2.addEventListener('click', function(){
 }*/
 
 function addSpells(e){
-    document.querySelector('.spells').innerHTML += `<li>${e.target.newHeading.value}</li>`;
+    // when nothing entered but submit pressed, do nothing
+    if(e.target.spell.value === "")
+        return;
+    document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
     document.querySelector('form').reset();
 }
 
