@@ -27,7 +27,7 @@ h1 {
   font-size: 3vw;
   color: rgba(100, 50, 0, 0.8);
   padding: 1.5rem 4rem;
-  box-shadow: 1px 1px 15px  rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 15px  rgba(0,0,0,0.4);
   position: relative;
   left: 36vw;
   top: -40vw;
@@ -106,6 +106,24 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #dca936;
+}
+
+.b{
+  background-color: transparent;
+  color: #6b3102;
+  font-size: 1rem;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  transition: background-color .25s ease-out,color .25s ease-out;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.b:hover{
+  background-color: rgba(202, 97, 37, 0.3);
 }
 
 /*

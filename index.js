@@ -60,6 +60,8 @@ const colors = {
     4: 'red',
     5: 'black'
 }
+let data = [];
+let num = 0;
 
 function addSpells(e){
     // when nothing entered but submit pressed, do nothing
@@ -71,8 +73,16 @@ function addSpells(e){
 
     //document.querySelector('.spells').innerHTML += `<li>lvl.<span style="color:${colors[level]};background-color:white">${level}</span> ${e.target.spell.value}</li>`;
     //createNode(e);
-    document.querySelector('.spells').innerHTML += `<li>lvl.${level} ${e.target.spell.value}</li>`;
+    document.querySelector('.spells').innerHTML +=
+        `<li id="${num}"><button class=b onclick="buttonPressed(event);" value=${num}>lvl.${level} 
+        ${e.target.spell.value}</button></li>`;
+    
+    // push the data into an array
+    data.push([e.target.spell.value, level]);
+
     document.querySelector('form').reset();
+
+    num++;
 }
 
 function createNode(e){
@@ -92,6 +102,19 @@ document.querySelector('form').addEventListener('submit', function(e){
 
     addSpells(e);
 });
+
+function buttonPressed(e){
+    e.preventDefault();
+
+    // remove an element from the list
+    const element = document.getElementById(e.target.value);
+    element.parentNode.removeChild(element);
+
+    // remove the data from the array by setting it to null
+    data[e.target.value] = null;
+
+    console.log(data);
+}
 
 // "submit" button works when enter is pressed instead of pressing the button
 /*window.addEventListener('keydown', function(e){
