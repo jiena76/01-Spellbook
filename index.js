@@ -64,7 +64,7 @@ const colors = {
 function addSpells(e){
     // when nothing entered but submit pressed, do nothing
     if(!e.target.spell.value){
-        return;
+        return;edit
     }
 
     const level = document.querySelector('.range-bar').value;
