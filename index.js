@@ -57,7 +57,10 @@ function addSpells(e){
     // when nothing entered but submit pressed, do nothing
     if(!e.target.spell.value)
         return;
-    document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
+    //document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
+    let li = document.createElement("li")
+    li.appendChild(document.createTextNode(e.target.spell.value));
+    document.querySelector('ul').appendChild(li);
     document.querySelector('form').reset();
 }
 
