@@ -53,18 +53,36 @@ b2.addEventListener('click', function(){
     h1text = h1.textContent;
 }*/
 
+const colors = {
+    1: 'green',
+    2: 'yellow',
+    3: 'orange',
+    4: 'red',
+    5: 'black'
+}
+
 function addSpells(e){
     // when nothing entered but submit pressed, do nothing
-    if(!e.target.spell.value)
+    if(!e.target.spell.value){
         return;
-    //document.querySelector('.spells').innerHTML += `<li>${e.target.spell.value}</li>`;
-    createNode(e);
+    }
+
+    const level = document.querySelector('.range-bar').value;
+
+    document.querySelector('.spells').innerHTML += 
+        `<li>lvl.<span style="color:${colors[level]};background-color:white">
+    ${level}</span> ${e.target.spell.value}</li>`;
+    //createNode(e);
     document.querySelector('form').reset();
 }
 
 function createNode(e){
     let li = document.createElement("li")
-    li.appendChild(document.createTextNode("lvl." + e.target.level.value + " " + e.target.spell.value));
+    const level = document.querySelector('.range-bar').value;
+
+    li.appendChild(document.createTextNode(
+        `lvl.<span style="color:${colors[level]}">
+        ${level}</span> ${e.target.spell.value}`));
     document.querySelector('ul').appendChild(li);
 }
 
