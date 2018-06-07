@@ -14,8 +14,8 @@ function addSpells(e){
     //document.querySelector('.spells').innerHTML += `<li>lvl.<span style="color:${colors[level]};background-color:white">${level}</span> ${e.target.spell.value}</li>`;
     //createNode(e);
     document.querySelector('.spells').innerHTML +=
-        `<li><button class='b' onclick="buttonPressed(event);">lvl.${level} 
-        ${input}</button></li>`;
+        `<li class='item'><button class='b' title="delete" onclick="buttonPressed(event);">lvl.${level} ${input}</button>
+        <button class="bold" title="bold" onclick="bold(event);"><strong>B</strong></button></li>`;
     
     // push the data into an array
     data.push(`${input} ${level}`);
@@ -44,21 +44,14 @@ document.querySelector('form').addEventListener('submit', function(e){
 // WHAT IS BIND???
 
 function buttonPressed(e){
-    e.preventDefault();
-
     // element = selects <li> parent of <button>
     const element = e.target.parentNode;
-
-    element.parentNode.removeChild(e.target.parentNode);
-    /*
-    // remove an element from the list
-    const element = document.getElementById(e.target.value);
     element.parentNode.removeChild(element);
+}
 
-    // remove the data from the array by setting it to null
-    data[e.target.value] = null;
-
-    console.log(data);*/
+function bold(e){
+    const element = e.target.parentNode;
+    element.querySelector('.b').style.color = 'blue';
 }
 
 //  Doesn't work anymore after changing elements of the list into buttons
