@@ -145,7 +145,7 @@ function levelSort(){
     console.log(lis);
 };
 
-document.querySelector('.range-bar').addEventListener("mousemove", function(e){
+document.querySelector('.range-bar').addEventListener("change", function(e){
     console.log(e.target.value);
     document.querySelector('.value').innerHTML = `Value = ${e.target.value}`;
 });
