@@ -22,7 +22,7 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   width: 50vw;
-  height: 40vw;;
+  height: 44vw;;
   overflow-y: scroll;
   color: rgba(100, 50, 0, 0.8);
   padding: 1.5rem 4rem;
@@ -123,6 +123,25 @@ button[type="submit"]:hover {
 
 .b:hover{
   background-color: rgba(202, 97, 37, 0.3);
+}
+
+form > button{
+  margin-left: 2vw;
+  background-color: rgba(240, 213, 198, 0.486);
+  color: black;
+  font-size: 2vw;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  transition: background-color .25s ease-out,color .25s ease-out;
+  line-height: 1;
+  cursor: pointer;
+}
+
+form > button:hover{
+  background-color: rgba(100, 37, 0, 0.678);
 }
 
 /*

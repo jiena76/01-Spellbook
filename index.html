@@ -17,13 +17,14 @@
     -->
 
     <form method='post'>
-        New Spell:<br>
+      New Spell:
+      <button type="button" name='sort' onclick="levelSort()">Sort by Levels</button>
+      <br>
       <div>  
         <!-- AUTOFOCUS: when the page loads, the cursor starts here -->
         <input type="text" name="spell" placeholder="Enter a spell name" autofocus><br>
         <button type="submit">Submit</button>
       </div>
-      <button type="button" name='sort' onclick="levelSort()">Sort by Levels</button>
     </form>
     Level:
     <input type="range" class='range-bar' min="1" max="5" value="Level">
